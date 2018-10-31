@@ -52,7 +52,7 @@ while desired_activity != "1" and desired_activity != "2":
 
 # determine desired period
 desired_period = ""
-period = ""
+period = {}
 
 if desired_activity == "1":
     print
