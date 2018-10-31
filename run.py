@@ -44,13 +44,12 @@ print ("Hello, welcome to the Friedrich Nietzsche quote generator.")
 desired_activity = ""
 while desired_activity != "1" and desired_activity != "2":
 	print
-	print ("what would you like to do: ")
+	print ("What would you like to do: ")
 	print ("    1) simply generate quotes")
 	print ("    2) play a game")
 	desired_activity = raw_input("? ")
 
 # determine desired period
-
 period = 0
 
 if desired_activity == "1":
@@ -59,16 +58,16 @@ if desired_activity == "1":
     while period != "1" and period != "2" and period != "3":
 	    print
 	    print ("Which period of Nietzsche's work would you like to mimic:")
-	    print ("1) the Wagnerian-Schopenhauerian period")
-	    print ("2) the Positivistic period")
-	    print ("3) the Late period")
+	    print ("    1) the Wagnerian-Schopenhauerian period")
+	    print ("    2) the Positivistic period")
+	    print ("    3) the Late period")
 	    period = raw_input("? ")
 
 if desired_activity == "2":
     print
     print ("OK, let's play a game.")
     period = str(randint(1,3))
-    print period
+    print ("period = " + period)
 
 if period == "1":
 	period = wagnerian
@@ -124,15 +123,17 @@ for current in range(number):
 			pass
 
 if desired_activity == "1":
+	print
 	print ("That's all for now!")
 
 if desired_activity == "2":
-	print ("So, which Nittzschean period do you think are represented here: ")
+	print
+	print ("So, which Nietzschean period do you think is represented here: ")
 	print ("1) the Wagnerian-Schopenhauerian period")
 	print ("2) the Positivistic period")
 	print ("3) the Late period")
 	answer = raw_input("? ")
-
+    print
 	if period == answer:
 		print ("That's correct!")
 	else:
