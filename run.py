@@ -38,6 +38,7 @@ late = {
 }
 
 # welcome message
+print
 print ("Hello, welcome to the Friedrich Nietzsche quote generator.")
 
 # determine desired activity
@@ -134,7 +135,9 @@ if desired_activity == "2":
 	print ("1) the Wagnerian-Schopenhauerian period")
 	print ("2) the Positivistic period")
 	print ("3) the Late period")
-	answer = raw_input("? ")
+	answer = ""
+	while answer != "1" and answer != "2" and answer != "3":
+		answer = raw_input("? ")
 	print
 	if desired_period == answer:
 		print ("That's correct!")
