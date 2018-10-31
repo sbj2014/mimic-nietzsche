@@ -10,6 +10,7 @@ Markov Chain Text Generator
 import fetch_data
 from markov_python.cc_markov import MarkovChain
 from random import randint
+from time import sleep
 
 # prepare Markov Chain generator
 mc = MarkovChain()
@@ -86,6 +87,12 @@ for link in period:
 	if desired_activity == "1":
 	    print period[link] + ": " + link
 	mc.add_string(fetch_data.acquire_data(link))
+# smooth out time if playing game
+if desired_activity == "2":
+	if period == wagnerian:
+		sleep(12)
+	if period == late:
+		sleep(8)
 
 # set parameters of passages 
 number = ""
