@@ -41,25 +41,34 @@ late = {
 print ("Hello, welcome to the Friedrich Nietzsche quote generator.")
 
 # determine desired activity
-desired_activity = 0
+desired_activity = ""
+
 while desired_activity != "1" and desired_activity != "2":
 	print
-	print ("what would you like to do: ")
-	print ("    1) simply generate a quote")
+	print ("What would you like to do: ")
+	print ("    1) simply generate quotes")
 	print ("    2) play a game")
 	desired_activity = raw_input("? ")
 
-
 # determine desired period
-print
 period = 0
-while period != "1" and period != "2" and period != "3":
-	print
-	print ("Which period of Nietzsche's work would you like to mimic:")
-	print ("1) the Wagnerian-Schopenhauerian period")
-	print ("2) the Positivistic period")
-	print ("3) the Late period")
-	period = raw_input("? ")
+
+if desired_activity == "1":
+    print
+    print ("OK, let's just generate some quotes.")
+    while period != "1" and period != "2" and period != "3":
+	    print
+	    print ("Which period of Nietzsche's work would you like to mimic:")
+	    print ("    1) the Wagnerian-Schopenhauerian period")
+	    print ("    2) the Positivistic period")
+	    print ("    3) the Late period")
+	    period = raw_input("? ")
+
+if desired_activity == "2":
+    print
+    print ("OK, let's play a game.")
+    period = str(randint(1,3))
+    print ("period = " + period)
 
 if period == "1":
 	period = wagnerian
@@ -70,9 +79,10 @@ else:
 
 # use method to read a string (call multiple times to add additional data)
 print
-print ("Accessing works: ")
+print ("Accessing works... ")
 for link in period:
-	print period[link] + ": " + link
+	if desired_activity == "1":
+	    print period[link] + ": " + link
 	mc.add_string(fetch_data.acquire_data(link))
 
 # set parameters of passages 
@@ -112,3 +122,20 @@ for current in range(number):
 			break
 		except UnicodeEncodeError:
 			pass
+
+if desired_activity == "1":
+	print
+	print ("That's all for now!")
+
+if desired_activity == "2":
+	print
+	print ("So, which Nietzschean period do you think is represented here: ")
+	print ("1) the Wagnerian-Schopenhauerian period")
+	print ("2) the Positivistic period")
+	print ("3) the Late period")
+	answer = raw_input("? ")
+	print
+	if period == answer:
+		print ("That's correct!")
+	else:
+		print ("Sorry, the correct answer is " + period)
