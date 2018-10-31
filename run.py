@@ -51,28 +51,29 @@ while desired_activity != "1" and desired_activity != "2":
 	desired_activity = raw_input("? ")
 
 # determine desired period
-period = 0
+desired_period = ""
+period = ""
 
 if desired_activity == "1":
     print
     print ("OK, let's just generate some quotes.")
-    while period != "1" and period != "2" and period != "3":
+    while desired_period != "1" and desired_period != "2" and desired_period != "3":
 	    print
 	    print ("Which period of Nietzsche's work would you like to mimic:")
 	    print ("    1) the Wagnerian-Schopenhauerian period")
 	    print ("    2) the Positivistic period")
 	    print ("    3) the Late period")
-	    period = raw_input("? ")
+	    desired_period = raw_input("? ")
 
 if desired_activity == "2":
     print
     print ("OK, let's play a game.")
-    period = str(randint(1,3))
-    print ("period = " + period)
+    desired_period = str(randint(1,3))
+    print ("period = " + desired_period)
 
-if period == "1":
+if desired_period == "1":
 	period = wagnerian
-elif period == "2":
+elif desired_period == "2":
 	period = positivistic
 else:
 	period = late
@@ -135,7 +136,7 @@ if desired_activity == "2":
 	print ("3) the Late period")
 	answer = raw_input("? ")
 	print
-	if period == answer:
+	if desired_period == answer:
 		print ("That's correct!")
 	else:
-		print ("Sorry, the correct answer is " + period)
+		print ("Sorry, the correct answer is " + desired_period)
