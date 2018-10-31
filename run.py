@@ -133,7 +133,7 @@ if desired_activity == "2":
 	print ("2) the Positivistic period")
 	print ("3) the Late period")
 	answer = raw_input("? ")
-    print
+	print
 	if period == answer:
 		print ("That's correct!")
 	else:
