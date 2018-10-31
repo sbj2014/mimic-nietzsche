@@ -6,7 +6,10 @@ Markov Chain Text Generator
 28 October 2018
 """
 
-# import necessary code (fetch_data module, slightly modified Codecademy Markov Chain generator module)
+"""
+import necessary code (including fetch_data module and 
+a slightly modified Codecademy Markov Chain generator module)
+"""
 import fetch_data
 from markov_python.cc_markov import MarkovChain
 from random import randint
@@ -45,8 +48,8 @@ print ("Hello, welcome to the Friedrich Nietzsche quote generator.")
 # determine desired activity
 desired_activity = ""
 
+print
 while desired_activity != "1" and desired_activity != "2":
-	print
 	print ("What would you like to do: ")
 	print ("    1) simply generate quotes")
 	print ("    2) play a game")
@@ -87,6 +90,7 @@ for link in period:
 	if desired_activity == "1":
 	    print period[link] + ": " + link
 	mc.add_string(fetch_data.acquire_data(link))
+
 # smooth out time if playing game
 if desired_activity == "2":
 	if period == wagnerian:
@@ -134,7 +138,7 @@ for current in range(number):
 
 if desired_activity == "1":
 	print
-	print ("That's all for now!")
+	print ("That's all for now!  Enjoy the quotes!")
 
 if desired_activity == "2":
 	print
