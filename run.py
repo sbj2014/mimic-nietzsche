@@ -42,7 +42,7 @@ print ("Hello, welcome to the Friedrich Nietzsche quote generator.")
 
 # determine desired activity
 desired_activity = 0
-while desired_activity =! 1 and desired_activity =! 2:
+while desired_activity != "1" and desired_activity != "2":
 	print
 	print ("what would you like to do: ")
 	print ("    1) simply generate a quote")
