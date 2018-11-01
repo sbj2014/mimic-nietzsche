@@ -158,3 +158,5 @@ if desired_activity == "2":
 		print ("Your score is " + score + " points")
 	else:
 		print ("Sorry, the correct answer is " + desired_period)
+		print ("Remember, you can look at mimic samples from each period and")
+		print ("learn the works associated with each by simply generating quotes (Option 1)")
