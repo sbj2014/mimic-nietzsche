@@ -151,6 +151,8 @@ if desired_activity == "2":
 		answer = raw_input("? ")
 	print
 	if desired_period == answer:
+		score = str(1000 - (number * length))
 		print ("That's correct!")
+		print ("Your score is " + score + " points")
 	else:
 		print ("Sorry, the correct answer is " + desired_period)
