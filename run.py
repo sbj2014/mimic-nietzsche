@@ -59,6 +59,7 @@ while desired_activity != "1" and desired_activity != "2":
 desired_period = ""
 period = {}
 
+# chosen by user if only generating quotes
 if desired_activity == "1":
     print
     print ("OK, let's just generate some quotes.")
@@ -70,6 +71,7 @@ if desired_activity == "1":
 	    print ("    3) the Late period")
 	    desired_period = raw_input("? ")
 
+# random and secret if playing a game
 if desired_activity == "2":
     print
     print ("OK, let's play a game.")
@@ -100,7 +102,7 @@ if desired_activity == "2":
 	if period == late:
 		sleep(8)
 
-# set parameters of passages 
+# set parameters of passages (number and length)
 number = ""
 while number != "1" and number !="2" and number != "3" and number != "4" and number != "5":
 	print
@@ -138,10 +140,16 @@ for current in range(number):
 		except UnicodeEncodeError:
 			pass
 
+# ending message if merely generating quotes
 if desired_activity == "1":
 	print
 	print ("That's all for now!  Enjoy the quotes!")
 
+"""
+if playing a game
+user tries to make an educated guess regarding
+the period from which the mimic quotes originate
+"""
 if desired_activity == "2":
 	print
 	print ("So, which Nietzschean period do you think is represented here: ")
@@ -152,11 +160,16 @@ if desired_activity == "2":
 	while answer != "1" and answer != "2" and answer != "3":
 		answer = raw_input("? ")
 	print
+
+# correct answer scores a number of points inversely related to the number and length of the passages	
 	if desired_period == answer:
 		score = str(1000 - (number * length))
 		print ("That's correct!")
 		print ("Your score is " + score + " points")
+
+# incorrect answer scores zero points but does reveal the correct answer and evoke some helpful advice
 	else:
 		print ("Sorry, the correct answer is " + desired_period)
 		print ("Remember, you can look at mimic samples from each period and")
-		print ("learn the works associated with each by simply generating quotes (Option 1)")
+		print ("learn the works associated with each by simply generating quotes")
+		print ("(Option 1 when asked at the start what you would like to do)")
