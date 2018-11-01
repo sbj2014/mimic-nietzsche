@@ -73,6 +73,8 @@ if desired_activity == "1":
 if desired_activity == "2":
     print
     print ("OK, let's play a game.")
+    print ("Your score for a correct answer is based on the selected number")
+    print ("and length of the passages.")
     desired_period = str(randint(1,3))
     print ("period = " + desired_period)
 
