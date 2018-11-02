@@ -48,11 +48,13 @@ print ("Hello, welcome to the Friedrich Nietzsche quote generator.")
 # determine desired activity
 desired_activity = ""
 
-print
 while desired_activity != "1" and desired_activity != "2":
+	print
 	print ("What would you like to do: ")
+	print
 	print ("    1) simply generate quotes")
 	print ("    2) play a game")
+	print
 	desired_activity = raw_input("? ")
 
 # determine desired period
@@ -66,15 +68,18 @@ if desired_activity == "1":
     while desired_period != "1" and desired_period != "2" and desired_period != "3":
 	    print
 	    print ("Which period of Nietzsche's work would you like to mimic:")
+	    print
 	    print ("    1) the Wagnerian-Schopenhauerian period")
 	    print ("    2) the Positivistic period")
 	    print ("    3) the Late period")
+	    print
 	    desired_period = raw_input("? ")
 
 # random and secret if playing a game
 if desired_activity == "2":
     print
     print ("OK, let's play a game.")
+    print
     print ("Your score for a correct answer is based on the selected number")
     print ("and length of the passages.")
     desired_period = str(randint(1,3))
@@ -119,7 +124,9 @@ while length < 3 or length > 100:
 		length = raw_input("? ")
 		length = int(length)
 	except ValueError:
+		print
 		print ("Sorry, that's not a valid length.")
+		print
 		print ("Please, try again!")
 		length = 0
 
@@ -153,11 +160,13 @@ the period from which the mimic quotes originate
 if desired_activity == "2":
 	print
 	print ("So, which Nietzschean period do you think is represented here: ")
+	print
 	print ("1) the Wagnerian-Schopenhauerian period")
 	print ("2) the Positivistic period")
 	print ("3) the Late period")
 	answer = ""
 	while answer != "1" and answer != "2" and answer != "3":
+		print
 		answer = raw_input("? ")
 	print
 
@@ -165,11 +174,13 @@ if desired_activity == "2":
 	if desired_period == answer:
 		score = str(1000 - (number * length))
 		print ("That's correct!")
+		print
 		print ("Your score is " + score + " points")
 
 # incorrect answer scores zero points but does reveal the correct answer and evoke some helpful advice
 	else:
-		print ("Sorry, the correct answer is " + desired_period)
+		print ("Sorry, the correct answer is " + desired_period + ".")
+		print
 		print ("Remember, you can look at mimic samples from each period and")
 		print ("learn the works associated with each by simply generating quotes")
-		print ("(Option 1 when asked at the start what you would like to do)")
+		print ("(Option 1 when asked at the start what you would like to do).")
