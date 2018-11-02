@@ -83,7 +83,6 @@ if desired_activity == "2":
     print ("Your score for a correct answer is based on the selected number")
     print ("and length of the passages.")
     desired_period = str(randint(1,3))
-    print ("period = " + desired_period)
 
 if desired_period == "1":
 	period = wagnerian
