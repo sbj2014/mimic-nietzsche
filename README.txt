@@ -1,5 +1,4 @@
-This is my final project for the Codecademy Pro Learn Python course
-, and it is about as basic as it gets.  The program, written in Python 2.7.15, offers you the choice of two activities.    
+This is my final project for the Codecademy Pro Learn Python course, and it is about as basic as it gets.  The program, written in Python 2.7.15, offers you the choice of two activities.    
 	
 In the first, it simply makes up and outputs quotes in the style of the German philosopher Friedrich Nietzsche.  The user is able to set some parameters, including the distinctive period of Nietzsche's works from which the material should be drawn, the number of passages to be generated, and the number of words per passage.  
 
